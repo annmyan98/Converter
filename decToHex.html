@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <script src="js/jQuery/jquery-3.1.0.js"></script>
+    <script type="text/javascript">
+        function decToHex(decValue) {
+
+            var hexValue = '',
+                hexValueArr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F', ],
+                str = hexValueArr.toString(),
+                rep = str.replace(/,/g, ''),
+                remainder,
+                radix = 16;
+           
+            while (decValue > 0) {
+                remainder = decValue % radix;
+                hexValue = rep.substr(remainder, 1) + hexValue;
+                decValue = Math.floor(decValue / radix);
+            }
+
+            return hexValue;
+
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

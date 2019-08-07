@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <script src="js/jQuery/jquery-3.1.0.js"></script>
+    <script type="text/javascript" >
+        function decToOct(decValue) {
+
+            var octValue = '',
+            radix = 8;
+
+            while (decValue > 0) {
+                octValue = decValue % radix + octValue;
+                decValue = Math.floor(decValue / radix);
+            }
+
+            return octValue;
+
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,129 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+main {
+	height: 100%;
+	width: 100%;
+
+	position: absolute;
+
+	background: #04b1a1;
+	display: flex;
+}
+
+.center {
+	width: 225px;
+
+	background: url(../img/numbers.jpg) center / cover no-repeat ;
+
+	padding: 40px 200px 170px 200px;
+	border-radius: 15px;
+	box-shadow: 12px 12px 20px #f9f1e4;
+	margin: auto;
+
+	line-height: 45px;
+}
+
+input {
+	height: 30px;
+	width: 200px;
+
+	background: #fff6a9;
+
+	padding-left: 10px;
+	border: 2px solid #5FC3B6;
+	border-radius: 5px;
+	box-shadow: 4px 4px 3px #5FC3B6;
+}
+
+h1 {
+	position: absolute;
+
+	color: transparent;
+	font-family: changa one;
+	font-size: 4em;
+	letter-spacing: 6px;
+	text-transform: uppercase;
+
+	padding: 0;
+	margin: -110px 0 0 -150px;
+}
+
+h1:before {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	content: attr(data-heading);
+	-webkit-text-fill-color: transparent;
+
+	background: -webkit-linear-gradient(transparent 0, transparent 54%, #ffffff 54%, #ffffff 100%);
+	-webkit-background-clip: text;
+
+	animation: splitLeft 5s;
+}
+
+h1:after {
+	max-height: 54%;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	color: #ffffff;
+	content: attr(data-heading);
+	
+	overflow: hidden;
+
+	animation: splitRight 5s;
+}
+
+@keyframes splitRight {
+	0 {
+		transform: translate(0);
+	}
+	15% {
+		transform: translate(50%, 0);
+	}
+	30% {
+		transform: translate(50%, 50%);
+	}
+	45% {
+		transform: translate(-50%, 50%);
+	}
+	60% {
+		transform: translate(-50%, 0);
+	}
+	75% {
+		transform: translate(0);
+	}
+	100% {
+		transform: translate(0);
+	}
+}
+
+@keyframes splitLeft {
+	0 {
+		transform: translate(0);
+	}
+	15% {
+		transform: translate(-50%, 0);
+	}
+	30% {
+		transform: translate(-50%, -50%);
+	}
+	45% {
+		transform: translate(50%, -50%);
+	}
+	60% {
+		transform: translate(50%, 0);
+	}
+	75% {
+		transform: translate(0);
+	}
+	100% {
+		transform: translate(0);
+	}
+}

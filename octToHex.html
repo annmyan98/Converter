@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="js/jQuery/jquery-3.1.0.js"></script>
+    <script type="text/javascript">
+        function octToHex(octValue) {
+
+            var hexValue = '',
+                decValue = 0,
+                str = octValue.toString(),
+                len = str.length,
+                n = 0;
+
+            for (var i = len - 1; i >= 0; i--) {
+                decValue += str[i] * Math.pow(8, n);
+                n++;
+            }
+
+            var hexValueArr = '0123456789ABCDEF',
+                radix = 16,
+                remainder;
+
+            while (decValue > 0) {
+                remainder = decValue % radix;
+                hexValue = hexValueArr.substr(remainder, 1) + hexValue;
+                decValue = Math.floor(decValue / radix);
+            }
+
+            return hexValue;
+
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

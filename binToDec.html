@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="js/jQuery/jquery-3.1.0.js"></script>
+    <script type="text/javascript">
+        function binToDec(binValue) {
+
+            var decValue = "",
+                str = binValue.toString(),
+                len = str.length,
+                radix = 2,
+                n = 0;
+
+            for (var i = len - 1; i >= 0; i--) {
+                decValue += str[i] * Math.pow(radix, n);
+                n++;
+            }
+
+            return decValue;
+
+        }
+    </script>
+    
+</head>
+<body>
+
+
+</body>
+
+</html>
+

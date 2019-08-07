@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="js/jQuery/jquery-3.1.0.js"></script>
+    <script type="text/javascript">
+        function decToBin(decValue) {
+            var binValue = '',
+                radix = 2;
+
+            while (decValue) {
+                binValue = decValue % radix + binValue;
+                decValue = Math.floor(decValue / radix);
+            }
+
+            return binValue;
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

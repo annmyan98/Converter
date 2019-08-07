@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="js/jQuery/jquery-3.1.0.js"></script>
+    <script type="text/javascript">
+        function binToOct(binValue) {
+
+            var octValue = '',
+                binValueArray = ['000', '001', '010', '011', '100', '101', '110', '111'],
+                str = binValue.toString(),
+                len = str.length;
+
+            while (str.length % 3 != 0) {
+                str = '0' + str;
+            }
+            
+            for (var j = 0, max = len; j < max; j += 3) {
+                octValue += binValueArray.indexOf(str.substr(j, 3));
+            }
+
+            return octValue;
+
+        } 
+      </script>
+</head>
+<body>
+
+</body>
+</html>

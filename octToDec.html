@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="js/jQuery/jquery-3.1.0.js"></script>
+    <script type="text/javascript">
+        function octToDec(octValue) {
+
+            var decValue = 0,
+                str = octValue.toString(),
+                len = str.length,
+                radix = 8,
+                n = 0;
+
+            for (var i = len - 1; i >= 0; i--) {
+                decValue += str[i] * Math.pow(8, n);
+                n++;
+            }
+
+            return decValue;
+
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

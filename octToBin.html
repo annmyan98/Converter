@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="js/jQuery/jquery-3.1.0.js"></script>
+    <script type="text/javascript">
+        function octToBin(octValue) {
+
+            var binValue = '',
+                str = octValue.toString(),
+                len = str.length,
+                binValueArray = ['000', '001', '010', '011', '100', '101', '110', '111'],
+                octValueArray = ['0', '1', '2', '3', '4', '5', '6', '7'];
+
+            for (var j = 0; j < str.length; j++) {
+                binValue += binValueArray[octValueArray.indexOf(str.substr(j, 1))];
+            }
+
+            return binValue;
+
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

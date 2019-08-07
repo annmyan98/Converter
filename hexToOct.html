@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="js/jQuery/jquery-3.1.0.js"></script>
+    <script type="text/javascript">
+        function hexToOct(hexValue) {
+
+            var binValue = '',
+                octValue = '',
+                str = hexValue.toString(),
+                len = str.length,
+                hexValueArray = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'],
+                binValueArray = ['0000', '0001', '0010', '0011', '0100', '0101', '0110', '0111', '1000', '1001', '1010', '1011', '1100', '1101', '1110', '1111'];
+            
+            for (var j = 0; j < len; j++) {
+                binValue += binValueArray[hexValueArray.indexOf(str.substr(j, 1))];
+            }
+           
+            var string = binValue.toString(),
+                arr = string.length,
+                octValueArray = ['000', '001', '010', '011', '100', '101', '110', '111'];
+
+            while (string.length % 3 != 0) {
+                    string = '0' + string;
+            }
+              
+            for (var i = 0; i < arr; i += 3) {
+                    octValue += octValueArray.indexOf(string.substr(i, 3));
+            }
+
+            return octValue;
+
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
